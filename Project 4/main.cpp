@@ -20,10 +20,10 @@ int main()
     Vector2 mappos{bgX, 0.0};
     const float mapScale {4.0};
 
-    Prop rock{Vector2{0.f, 0.f}, LoadTexture("nature_tileset/Rock.png")};
-
     // Draw Character
     Character knight{windowDimensions[0], windowDimensions[1]};
+
+    Prop rock{Vector2{0.f, 0.f}, LoadTexture("nature_tileset/Rock.png")};
 
 
     while (!WindowShouldClose())
@@ -35,12 +35,13 @@ int main()
         //Moving the map
         mappos = Vector2Scale(knight.getworldPos(), -1.f);
         
-        rock.Render(knight.getworldPos());
-
-        
-        
         // Draw the background
         DrawTextureEx(background, mappos, 0.0, mapScale, WHITE);
+
+        // Draw the rock
+        rock.Render(knight.getworldPos());
+
+
         knight.tick(GetFrameTime());
         // Check map bounds
             if (knight.getworldPos().x < 0.f ||
