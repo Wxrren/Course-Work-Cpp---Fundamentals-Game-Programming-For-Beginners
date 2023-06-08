@@ -1,9 +1,21 @@
 # Course-work-C++
-My coursework I've been doing on a udemy course. Keeping it private as it's a paid course and unsure if I'm allowed to share publicly. I wanted too upload it so peers can review my progress as I'm new to coding. 
-04/04/2023 update - I've made a mess of this folder. going to sort through and attempt to clean.
 
-UPDATE 05/05/2023 
-All useless files have been removed and what's left is just my code.
-I've also decided that I need to change what I'm uploaded - I have been documenting things that I do as I learn it but this is taking up space and becoming messy - Going forward I will only upload code used for certain parts of certain projects and keep all the learning in a seperate word pad which I will upload at the end. This way it will be a lot more clear what the project is and what I'm doing.
+My coursework I've been doing on a udemy course. I wanted too upload it so peers can review my progress as I'm new to coding. 
 
-UPDATE 07/05/2023 - I have one last project for this particular course. I'm going to create this in a new repositary to avoid this because over crowded.
+## Project Overview
+
+This course consists of 4 projects.
+
+1. Project 1 - First concepts - setting up VS code - Printing a "hello world" to the terminal.
+2. Project 2 - Axe Game - Create a game where the circle needs to avoid the square or the "axe"
+3. Project 3 - Dasher game - Create a runner game with an animated 2D character which runs and jumps over obstacles with a win and loss condition. 
+4. Project 4 - Clash game - Create a top down game where you can run around in a world with enemies that can chase and do damage to you. You can attack and kill the enemies and create an "open world"
+
+
+## What is the course?
+
+This course is created by the gamedev.tv team on udemy. It's called "C++ Fundamentals: Game Programming For Beginners"
+
+## Where to find?
+
+You can find the course [here](https://www.udemy.com/course/cpp-fundamentals/)
