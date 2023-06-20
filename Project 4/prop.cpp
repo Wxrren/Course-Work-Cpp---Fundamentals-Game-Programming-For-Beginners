@@ -16,3 +16,14 @@ void Prop::Render(Vector2 KnightPos)
     Vector2 screenPos{ Vector2Subtract(worldPos, KnightPos) };
     DrawTextureEx(texture, screenPos, 0.f, scale, WHITE);
 }
+
+ Rectangle Prop::GetCollisionRec(Vector2 KnightPos)
+ {
+    Vector2 screenPos{ Vector2Subtract(worldPos, KnightPos) };
+    return Rectangle{
+        screenPos.x,
+        screenPos.y,
+        texture.width * scale,
+        texture.height * scale
+    };
+ }
