@@ -2,6 +2,7 @@
 #include "raymath.h"
 #include "Character.h"
 #include "prop.h"
+#include "enemy.h"
 
 int main()
 {
@@ -32,7 +33,11 @@ int main()
         {Vector2{700.f, 500.f}, LoadTexture("nature_tileset/log.png")}
     };
 
-
+    Enemy goblin{
+        Vector2{},
+        LoadTexture("characters/goblin_idle_spritesheet.png"),
+        LoadTexture("characters/goblin_run_spritesheet.png"),
+    };
 
     while (!WindowShouldClose())
     {
@@ -73,6 +78,7 @@ int main()
             }
         }
     
+        goblin.tick(GetFrameTime());
 
         // Stop Drawing.
         EndDrawing();
