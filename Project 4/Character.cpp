@@ -1,6 +1,7 @@
 #include "character.h"
 #include "raylib.h"
 #include "raymath.h"
+#include "BaseCharacter.h"
 
 
 Character::Character(int winWidth, int winHeight)
@@ -57,18 +58,3 @@ void Character::tick(float deltaTime)
     DrawTexturePro(texture, source, dest, origin, 0.f, WHITE);
 }
 
-void Character::undoMovement()
-    {
-        worldPos = worldPosLastFrame;
-    }
-
-     Rectangle Character::GetCollisionRec()
-     {
-    
-    return Rectangle{
-        screenPos.x,
-        screenPos.y,
-        width * scale,
-        height * scale
-    };
-     }
