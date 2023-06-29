@@ -9,9 +9,10 @@ public:
     Vector2 getworldPos() { return worldPos; }
     void undoMovement();
     Rectangle GetCollisionRec();
+    virtual void tick(float deltaTime);
 
 protected:
-   Texture2D texture{LoadTexture("characters/knight_idle_spritesheet.png")};
+    Texture2D texture{LoadTexture("characters/knight_idle_spritesheet.png")};
     Texture2D idle   {LoadTexture("characters/knight_idle_spritesheet.png")};
     Texture2D run    {LoadTexture("characters/knight_run_spritesheet.png")};
     Vector2 screenPos{};
