@@ -20,6 +20,7 @@ void Enemy::tick(float deltaTime)
     if (!getAlive()) return;
     // Get toTarget
     velocity = Vector2Subtract (target->getScreenPos(),getScreenPos());
+    if (Vector2Length(velocity) < radius) velocity = {};
     BaseCharacter::tick(deltaTime);
 
     //Damage Character
