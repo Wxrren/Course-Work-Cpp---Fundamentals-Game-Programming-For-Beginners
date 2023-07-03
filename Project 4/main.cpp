@@ -3,6 +3,7 @@
 #include "Character.h"
 #include "prop.h"
 #include "enemy.h"
+#include <string>
 
 int main()
 {
@@ -58,6 +59,19 @@ int main()
             prop.Render(knight.getworldPos());
         }
 
+        //draw health
+        if (!knight.getAlive()) // Character is not alive
+        {
+            DrawText("game Over!", 55.f, 45.f, 40, RED);
+            EndDrawing();
+            continue;
+        }
+        else // character is alive
+        {
+            std::string knightsHealth = "Health: ";
+            knightsHealth.append(std::to_string(knight.getHealth()), 0, 5);
+            DrawText(knightsHealth.c_str(), 55.f, 45.f, 40, RED);
+        }
 
         knight.tick(GetFrameTime());
         // Check map bounds
