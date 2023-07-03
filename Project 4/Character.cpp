@@ -24,6 +24,7 @@ Vector2 Character::getScreenPos()
 void Character::tick(float deltaTime)
 {
 
+    if (!getAlive()) return;
 
     if (IsKeyDown(KEY_A))
         velocity.x -= 1.0;
@@ -48,7 +49,7 @@ if (rightleft > 0.f)
         weapon.width * scale,
         weapon.height * scale,
     };
-    rotation = {35.f};
+    rotation = IsMouseButtonDown(MOUSE_LEFT_BUTTON) ? 35.f : 0.f;
 }
 else
 {
@@ -60,7 +61,7 @@ else
         weapon.width * scale,
         weapon.height * scale,
     };
-    rotation = {-35.f};
+    rotation = IsMouseButtonDown(MOUSE_LEFT_BUTTON) ? -35.f : 0.f;
 }
 
 //draw the sword
@@ -77,3 +78,11 @@ DrawRectangleLines(
 );
 }
 
+ void Character::takeDamage(float damage)
+{
+    health -= damage;
+    if(health <= 0.f)
+    {
+        setAlive(false);
+    }
+}
