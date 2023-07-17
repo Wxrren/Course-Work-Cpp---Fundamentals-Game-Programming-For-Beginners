@@ -1,6 +1,6 @@
 # Course-work-C++
 
-My coursework I've been doing on a udemy course. I wanted too upload it so peers can review my progress as I'm new to coding. 
+My coursework I've been doing on a udemy course. I wanted to upload it so peers can review my progress as I'm new to coding. 
 
 ## Project Overview
 
